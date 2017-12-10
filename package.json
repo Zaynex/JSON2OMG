@@ -1,0 +1,36 @@
+{
+  "name": "json2omg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zaynex/JSON2OMG.git"
+  },
+  "homepage": "https://github.com/Zaynex/JSON2OMG#readme",
+  "bugs": {
+    "url": "https://github.com/Zaynex/JSON2OMG/issues"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production BABEL_ENV=library babel ./src --out-dir ./library",
+    "build:watch": "cross-env NODE_ENV=development BABEL_ENV=library-dev babel ./src --out-dir ./library --watch"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-plugin-module-resolver": "^3.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-minify": "^0.2.0",
+    "cross-env": "^5.1.1",
+    "eslint": "^4.12.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}

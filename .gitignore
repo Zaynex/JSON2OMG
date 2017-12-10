@@ -1,0 +1,17 @@
+# Logs
+logs
+*.log
+
+# Dependency directory
+node_modules
+
+# Editor configuration
+.idea
+.vscode
+
+# distribute file
+**/*-gitignore/**
+/*.tgz
+/library
+
+
