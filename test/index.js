@@ -1,10 +1,9 @@
 const { formatter } = require('../library/index.js')
 const data = {
   attr: {
-    backgroundColor: 'red',
+    'background-color': 'red',
     color: 'blue',
-    fontSize: '16px',
-    fontWeight: 700
+    fontSize: '16px'
   },
   unit: 'px'
 }

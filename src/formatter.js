@@ -1,6 +1,12 @@
 import { configProps } from './config'
+import { camelize } from './util'
 export default ({ attr, unit }) => {
-  const { width, height, lineHeight, opacity, borderRadius, borderWidth, borderColor, backgroundColor, color, fontSize, fontFamily, fontStyle } = attr
+  const attrWithCamelize = {}
+  for (let key in attr) {
+    const camelizeKey = camelize(key)
+    attrWithCamelize[camelizeKey] = attr[key]
+  }
+  const { width, height, lineHeight, opacity, borderRadius, borderWidth, borderColor, backgroundColor, color, fontSize, fontFamily, fontStyle } = attrWithCamelize
   const finallyWidth = width && { [configProps[unit].width]: width }
   const finallyHeight = height && { [configProps[unit].height]: height }
   const finallylineHeight = lineHeight && { [configProps[unit].lineHeight]: lineHeight }
