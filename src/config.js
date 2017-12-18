@@ -1,5 +1,5 @@
 export const configProps = {
-  'px': {
+  'css': {
     width: 'width',
     height: 'height',
     lineHeight: 'line-height',
@@ -16,7 +16,7 @@ export const configProps = {
     shadows: 'box-shadow',
     innerShadows: 'inner-shadow'
   },
-  'dp': {
+  'android': {
     width: 'layout_width',
     height: 'layout_height',
     border: 'border',
@@ -32,7 +32,7 @@ export const configProps = {
     shadows: 'box-shadow',
     innerShadows: 'inner-shadow'
   },
-  'pt': { // ios
+  'swift': {
     width: 'width',
     height: 'height',
     opacity: 'opacity',
@@ -49,3 +49,36 @@ export const configProps = {
     innerShadows: 'inner-shadow'
   }
 }
+
+export const mergeLanguage = (unit) => {
+  unit = unit.toLowerCase()
+  switch (unit) {
+    case CSS:
+    case EM:
+    case REM:
+    case STYLUS:
+    case LESS:
+    case SASS:
+    case SCSS:
+      return CSS
+    case ANDROID:
+      return ANDROID
+    case SWIFT:
+      return SWIFT
+    case OC:
+      return OC
+    default:
+      return CSS
+  }
+}
+
+const CSS = 'css'
+const EM = 'em'
+const REM = 'rem'
+const STYLUS = 'stylus'
+const LESS = 'less'
+const SASS = 'sass'
+const SCSS = 'scss'
+const ANDROID = 'android'
+const SWIFT = 'swift'
+const OC = 'objective-c'

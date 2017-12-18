@@ -5,6 +5,6 @@ const data = {
     color: 'blue',
     fontSize: '16px'
   },
-  unit: 'px'
+  language: 'css'
 }
 console.log(formatter(data))
