@@ -18,7 +18,7 @@ export const rgba2hexWithA = (color) => {
 }
 
 export const parseSketchColor2rgba = (rgbaFuncStr) => {
-  if ((!rgbaFuncStr || rgbaFuncStr) && !rgbaFuncStr.includes(RGBA)) return rgbaFuncStr
+  if (!rgbaFuncStr || (rgbaFuncStr && !rgbaFuncStr.includes(RGBA))) return rgbaFuncStr
   // eslint-disable-next-line no-unused-vars
   function rgba () {
     const { 0: _r, 1: _g, 2: _b, 3: _a } = arguments
